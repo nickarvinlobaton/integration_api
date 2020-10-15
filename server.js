@@ -8,6 +8,8 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => res.json({ message: "Hello world" }));
+
 app.post("/motivation", (req, res) => {
   let { motivation } = req.body;
 
